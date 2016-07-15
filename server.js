@@ -1,9 +1,8 @@
 var express = require('express');
 var app = express();
+var routes = require('./routes/index.js');
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
+routes(app);
 
 app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
